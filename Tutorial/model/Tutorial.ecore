@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE ecore:EPackage [
-<!ENTITY _0 "http://www.eclipse.org/emf/2002/Ecore">
-]>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tutorial" nsURI="http://www.eclipse.org/mdt/ocl/oclinecore/tutorial"
     nsPrefix="tut">
@@ -9,7 +6,7 @@
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Library">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType &_0;#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="books" ordered="false"
         upperBound="-1" eType="#//Book" containment="true" eOpposite="#//Book/library">
       <eAnnotations source="http://www.eclipse.org/OCL/Collection">
@@ -30,19 +27,19 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Book">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType &_0;#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="copies" eType="ecore:EDataType &_0;#//EBigInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="copies" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="library" eType="#//Library"
         eOpposite="#//Library/books"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Member">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType &_0;#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="library" eType="#//Library"
         eOpposite="#//Library/members"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Loan">
     <eStructuralFeatures xsi:type="ecore:EReference" name="book" eType="#//Book"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="member" eType="#//Member"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType &_0;#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
 </ecore:EPackage>
