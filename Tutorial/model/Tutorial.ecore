@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ecore:EPackage [
 <!ENTITY _0 "http://www.eclipse.org/emf/2002/Ecore">
-<!ENTITY _1 "platform:/plugin/org.eclipse.ocl.pivot/model-gen/oclstdlib.ecore">
 ]>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tutorial" nsURI="http://www.eclipse.org/mdt/ocl/oclinecore/tutorial"
@@ -44,6 +43,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Loan">
     <eStructuralFeatures xsi:type="ecore:EReference" name="book" eType="#//Book"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="member" eType="#//Member"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="date" eType="ecore:EClass &_1;#//OclInvalid"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType &_0;#//EDate"/>
   </eClassifiers>
 </ecore:EPackage>
